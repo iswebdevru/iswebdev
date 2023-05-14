@@ -14,6 +14,7 @@ pipeline {
         sh 'ls -al'
         sshagent(credentials:['ssh-iswebdev-green']) {
               sh 'ssh -o StrictHostKeyChecking=no green@iswebdev.ru'
+              sh 'rsync -rtz --progress . green@iswebdev.ru:/var/www/html1'
         }
         echo 'Success connect'
       }
