@@ -45,12 +45,30 @@
 			align-items: center;
 			flex-wrap: wrap;
 		}
+
+		.blink {
+			animation: blink 1s infinite;
+		}
+
+		@keyframes blink {
+			0% {
+				opacity: 0;
+			}
+
+			50% {
+				opacity: 1;
+			}
+
+			100% {
+				opacity: 0;
+			}
+		}
 	</style>
 </head>
 
 <body>
 	<div class="container">
-		<h1>iswebdev/> rm -rf sur</h1>
+		<h1>iswebdev/> rm -rf sur<span class="blink">_</span></h1>
 		<div class="links">
 			<a href="https://vk.com/iswebdev">VK</a>
 			<a href="https://t.me/iswebdev">Telegram</a>
